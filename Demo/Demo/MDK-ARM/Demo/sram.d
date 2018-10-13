@@ -34,5 +34,7 @@ demo\sram.o: C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Drivers/
 demo\sram.o: C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 demo\sram.o: C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sd.h
 demo\sram.o: C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_sdmmc.h
+demo\sram.o: C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+demo\sram.o: C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 demo\sram.o: C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 demo\sram.o: ../Inc/usart.h

@@ -337,7 +337,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc; ..\Src\SRAM; C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Drivers/STM32F4xx_HAL_Driver/Inc; C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy; C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include; C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Drivers/CMSIS/Include; ..\Src\sys; ..\Src\delay; ..\Src\MALLOC;C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Middlewares/Third_Party/FreeRTOS/Source/include;C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS</IncludePath>
+              <IncludePath>../Inc;      ..\Src\SRAM;      C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Drivers/STM32F4xx_HAL_Driver/Inc;      C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;      C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include;      C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Drivers/CMSIS/Include;      ..\Src\sys;      ..\Src\delay;      ..\Src\MALLOC;     C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;     C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Middlewares/Third_Party/FreeRTOS/Source/include;     C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -450,6 +450,11 @@
               <FileName>stm32f4xx_hal_msp.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/stm32f4xx_hal_msp.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_timebase_TIM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Src/stm32f4xx_hal_timebase_TIM.c</FilePath>
             </File>
           </Files>
         </Group>

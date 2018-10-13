@@ -1,6 +1,0 @@
---c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ..\Src\SRAM -I C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Drivers/STM32F4xx_HAL_Driver/Inc -I C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Drivers/CMSIS/Include -I ..\Src\sys -I ..\Src\delay -I ..\Src\MALLOC -I C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Middlewares/Third_Party/FreeRTOS/Source/include -I C:/Users/YANG/STM32Cube/Repository/STM32Cube_FW_F4_V1.21.0/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS
--I.\RTE\_Demo
--ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include
--ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
--D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx
--o demo\sys.o --omf_browse demo\sys.crf --depend demo\sys.d "..\Src\sys\sys.c"
