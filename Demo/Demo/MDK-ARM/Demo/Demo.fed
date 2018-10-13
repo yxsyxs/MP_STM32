@@ -1,10 +1,11 @@
-;#<FEEDBACK># ARM Linker, 5060750: Last Updated: Sat Oct 13 17:01:12 2018
+;#<FEEDBACK># ARM Linker, 5060750: Last Updated: Sun Oct 14 04:11:17 2018
 ;VERSION 0.2
 ;FILE cmsis_os.o
 __asm___10_cmsis_os_c_9292335d____REV16 <= USED 0
 __asm___10_cmsis_os_c_9292335d____REVSH <= USED 0
 __asm___10_cmsis_os_c_9292335d____RRX <= USED 0
 osAbortDelay <= USED 0
+osDelay <= USED 0
 osDelayUntil <= USED 0
 osKernelRunning <= USED 0
 osKernelSysTick <= USED 0
@@ -39,6 +40,7 @@ osSemaphoreRelease <= USED 0
 osSemaphoreWait <= USED 0
 osSignalSet <= USED 0
 osSignalWait <= USED 0
+osThreadCreate <= USED 0
 osThreadGetId <= USED 0
 osThreadGetPriority <= USED 0
 osThreadList <= USED 0
@@ -79,6 +81,8 @@ xEventGroupSetBits <= USED 0
 xEventGroupSync <= USED 0
 xEventGroupWaitBits <= USED 0
 ;FILE freertos.o
+MX_FREERTOS_Init <= USED 0
+StartDefaultTask <= USED 0
 __asm___10_freertos_c_a1747ccd____REV16 <= USED 0
 __asm___10_freertos_c_a1747ccd____REVSH <= USED 0
 __asm___10_freertos_c_a1747ccd____RRX <= USED 0
@@ -257,7 +261,6 @@ HAL_GPIO_EXTI_Callback <= USED 0
 HAL_GPIO_EXTI_IRQHandler <= USED 0
 HAL_GPIO_LockPin <= USED 0
 HAL_GPIO_ReadPin <= USED 0
-HAL_GPIO_TogglePin <= USED 0
 __asm___20_stm32f4xx_hal_gpio_c_ea787061____REV16 <= USED 0
 __asm___20_stm32f4xx_hal_gpio_c_ea787061____REVSH <= USED 0
 __asm___20_stm32f4xx_hal_gpio_c_ea787061____RRX <= USED 0

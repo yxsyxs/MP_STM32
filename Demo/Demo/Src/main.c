@@ -57,12 +57,22 @@
 
 /* USER CODE BEGIN Includes */
 #include "sram.h"
+
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
+
+//任务优先级
+#define START_TASK_PRIO		1
+//任务堆栈大小	
+#define START_STK_SIZE 		128  
+//任务句柄
+TaskHandle_t StartTask_Handler;
+//任务函数
+void start_task(void *pvParameters);
 
 /* USER CODE END PV */
 
@@ -72,7 +82,7 @@ void MX_FREERTOS_Init(void);
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
-
+void start_taskfunc(void *pvParameters);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
@@ -113,11 +123,20 @@ int main(void)
   MX_USART1_UART_Init();
   MX_FSMC_Init();
   /* USER CODE BEGIN 2 */
+  
   FSMC_SRAM_Init();
+  
+  xTaskCreate((TaskFunction_t )start_task,            //任务函数
+                (const char*    )"start_task",          //任务名称
+                (uint16_t       )START_STK_SIZE,        //任务堆栈大小
+                (void*          )NULL,                  //传递给任务函数的参数
+                (UBaseType_t    )START_TASK_PRIO,       //任务优先级
+                (TaskHandle_t*  )&StartTask_Handler);   //任务句柄    
+				
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
-  MX_FREERTOS_Init();
+//  MX_FREERTOS_Init();
 
   /* Start scheduler */
   osKernelStart();
@@ -202,6 +221,39 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+
+
+//开始任务任务函数
+void start_task(void *pvParameters)
+{
+//    taskENTER_CRITICAL();           //进入临界区
+    //创建TASK1任务
+//    xTaskCreate((TaskFunction_t )task1_task,             
+//                (const char*    )"task1_task",           
+//                (uint16_t       )TASK1_STK_SIZE,        
+//                (void*          )NULL,                  
+//                (UBaseType_t    )TASK1_TASK_PRIO,        
+//                (TaskHandle_t*  )&Task1Task_Handler);   
+//    //创建TASK2任务
+//    xTaskCreate((TaskFunction_t )task2_task,     
+//                (const char*    )"task2_task",   
+//                (uint16_t       )TASK2_STK_SIZE,
+//                (void*          )NULL,
+//                (UBaseType_t    )TASK2_TASK_PRIO,
+//                (TaskHandle_t*  )&Task2Task_Handler); 
+//    vTaskDelete(StartTask_Handler); //删除开始任务
+//    taskEXIT_CRITICAL();            //退出临界区
+	while(pdTRUE)
+	{
+	    HAL_GPIO_TogglePin(GPIOF, GPIO_PIN_9);
+	    HAL_GPIO_TogglePin(GPIOF, GPIO_PIN_10);
+	    vTaskDelay(1000);                           //延时1s，也就是1000个时钟节拍
+	}		
+} 
+
+
+
 #ifdef __GNUC__
   /* With GCC/RAISONANCE, small printf (option LD Linker->Libraries->Small printf
      set to 'Yes') calls __io_putchar() */
