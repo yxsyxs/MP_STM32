@@ -7,7 +7,6 @@
 
 void FSMC_SRAM_Init(void)
 {
-      /*##-1- Configure the SRAM device ##########################################*/
   /* SRAM device configuration */ 
   SRAM_HandleTypeDef hsram;
   FSMC_NORSRAM_TimingTypeDef SRAM_Timing;	
@@ -43,9 +42,6 @@ void FSMC_SRAM_Init(void)
     Error_Handler(); 
   }
 }
-
-
-
 
 
 //在指定地址(WriteAddr+Bank1_SRAM3_ADDR)开始,连续写入n个字节.
