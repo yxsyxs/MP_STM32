@@ -121,20 +121,7 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-//	for(i=0;i<1024*1024;i+=4096)
-//	{
-//		FSMC_SRAM_WriteBuffer(&temp,i,1);
-//		temp++;
-//	}
-	//依次读出之前写入的数据,进行校验		  
-// 	for(i=0;i<1024*1024;i+=4096) 
-//	{
-//  		FSMC_SRAM_ReadBuffer(&temp,i,1);
-//		if(i==0)sval=temp;
-// 		else if(temp<=sval)break;//后面读出的数据一定要比第一次读到的数据大.	   		   
-//		
-// 	}
-//    printf("容量：%d",temp-sval+1);	
+
 //    printf("hello world!");
 	  for(ts=0;ts<250000;ts++)
 	  {
