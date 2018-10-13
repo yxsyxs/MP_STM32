@@ -1,4 +1,4 @@
-;#<FEEDBACK># ARM Linker, 5060750: Last Updated: Sat Oct 13 09:46:22 2018
+;#<FEEDBACK># ARM Linker, 5060750: Last Updated: Sat Oct 13 14:07:20 2018
 ;VERSION 0.2
 ;FILE delay.o
 __asm___7_delay_c_f6a9c549____REV16 <= USED 0
@@ -22,6 +22,20 @@ __asm___6_gpio_c_62724882____RRX <= USED 0
 __asm___6_main_c_main____REV16 <= USED 0
 __asm___6_main_c_main____REVSH <= USED 0
 __asm___6_main_c_main____RRX <= USED 0
+fputc <= USED 0
+;FILE malloc.o
+__asm___8_malloc_c_4dd4ad64____REV16 <= USED 0
+__asm___8_malloc_c_4dd4ad64____REVSH <= USED 0
+__asm___8_malloc_c_4dd4ad64____RRX <= USED 0
+my_mem_free <= USED 0
+my_mem_init <= USED 0
+my_mem_malloc <= USED 0
+my_mem_perused <= USED 0
+myfree <= USED 0
+mymalloc <= USED 0
+mymemcpy <= USED 0
+mymemset <= USED 0
+myrealloc <= USED 0
 ;FILE sdio.o
 HAL_SD_MspDeInit <= USED 0
 __asm___6_sdio_c_62cda922____REV16 <= USED 0
@@ -266,6 +280,7 @@ HAL_UART_Receive <= USED 0
 HAL_UART_Receive_DMA <= USED 0
 HAL_UART_Receive_IT <= USED 0
 HAL_UART_RxHalfCpltCallback <= USED 0
+HAL_UART_Transmit <= USED 0
 HAL_UART_Transmit_DMA <= USED 0
 HAL_UART_Transmit_IT <= USED 0
 HAL_UART_TxHalfCpltCallback <= USED 0

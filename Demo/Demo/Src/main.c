@@ -47,9 +47,6 @@
 
 /* USER CODE BEGIN Includes */
 
-uint32_t testsram[250000] __attribute__((at(0X68000000)));//测试用的数组
-
-
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -79,10 +76,6 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-  uint32_t ts;
-  uint32_t i;
-  uint8_t temp = 0;	
-  uint8_t sval = 0;
 	                  
   /* USER CODE END 1 */
 
@@ -110,7 +103,6 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
   FSMC_SRAM_Init();
-  for(ts=0;ts<250000;ts++)testsram[ts]=ts;//测试用的数组
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -123,10 +115,7 @@ int main(void)
   /* USER CODE BEGIN 3 */
 
 //    printf("hello world!");
-	  for(ts=0;ts<250000;ts++)
-	  {
-		  printf("%d = %d\r\n",ts,testsram[ts]);
-	  }
+
   }
   /* USER CODE END 3 */
 

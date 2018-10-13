@@ -10,6 +10,7 @@
 "demo\usart.o"
 "demo\stm32f4xx_it.o"
 "demo\stm32f4xx_hal_msp.o"
+"demo\malloc.o"
 "demo\system_stm32f4xx.o"
 "demo\stm32f4xx_ll_fsmc.o"
 "demo\stm32f4xx_hal_sram.o"
