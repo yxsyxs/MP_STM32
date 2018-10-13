@@ -47,7 +47,7 @@
 
 /* USER CODE BEGIN Includes */
 
-uint32_t testsram[250000] __attribute__((at(0X68000000)));//测试用数组
+uint32_t testsram[250000] __attribute__((at(0X68000000)));//娴嬭瘯鐢ㄧ殑鏁扮粍
 
 
 /* USER CODE END Includes */
@@ -110,7 +110,7 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
   FSMC_SRAM_Init();
-  for(ts=0;ts<250000;ts++)testsram[ts]=ts;//预存测试数据
+  for(ts=0;ts<250000;ts++)testsram[ts]=ts;//娴嬭瘯鐢ㄧ殑鏁扮粍
   /* USER CODE END 2 */
 
   /* Infinite loop */
