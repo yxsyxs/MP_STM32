@@ -57,7 +57,9 @@
 
 /* USER CODE BEGIN Includes */
 #include "sram.h"
-
+#include "lcd.h"
+#include "text.h"	
+#include "delay.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -107,7 +109,6 @@ int main(void)
 
   /* USER CODE BEGIN Init */
 
-	
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -121,9 +122,10 @@ int main(void)
   MX_GPIO_Init();
   MX_SDIO_SD_Init();
   MX_USART1_UART_Init();
-  MX_FSMC_Init();
+//  MX_FSMC_Init();
   /* USER CODE BEGIN 2 */
-  
+  //delay_init(168);
+  LCD_Init();
   FSMC_SRAM_Init();
   
   xTaskCreate((TaskFunction_t )start_task,            //任务函数
@@ -132,11 +134,12 @@ int main(void)
                 (void*          )NULL,                  //传递给任务函数的参数
                 (UBaseType_t    )START_TASK_PRIO,       //任务优先级
                 (TaskHandle_t*  )&StartTask_Handler);   //任务句柄    
-				
+
+  
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
-//  MX_FREERTOS_Init();
+  //MX_FREERTOS_Init();
 
   /* Start scheduler */
   osKernelStart();
@@ -152,7 +155,7 @@ int main(void)
 
   /* USER CODE BEGIN 3 */
 
-//    printf("hello world!");
+    printf("hello world!");
 
   }
   /* USER CODE END 3 */
@@ -244,6 +247,7 @@ void start_task(void *pvParameters)
 //                (TaskHandle_t*  )&Task2Task_Handler); 
 //    vTaskDelete(StartTask_Handler); //删除开始任务
 //    taskEXIT_CRITICAL();            //退出临界区
+	LCD_ShowString(30,50,200,16,16,"Font Error!");
 	while(pdTRUE)
 	{
 	    HAL_GPIO_TogglePin(GPIOF, GPIO_PIN_9);

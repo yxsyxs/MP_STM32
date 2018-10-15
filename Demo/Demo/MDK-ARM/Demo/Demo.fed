@@ -1,4 +1,4 @@
-;#<FEEDBACK># ARM Linker, 5060750: Last Updated: Sun Oct 14 04:11:17 2018
+;#<FEEDBACK># ARM Linker, 5060750: Last Updated: Mon Oct 15 23:25:54 2018
 ;VERSION 0.2
 ;FILE cmsis_os.o
 __asm___10_cmsis_os_c_9292335d____REV16 <= USED 0
@@ -7,7 +7,6 @@ __asm___10_cmsis_os_c_9292335d____RRX <= USED 0
 osAbortDelay <= USED 0
 osDelay <= USED 0
 osDelayUntil <= USED 0
-osKernelRunning <= USED 0
 osKernelSysTick <= USED 0
 osMailAlloc <= USED 0
 osMailCAlloc <= USED 0
@@ -60,13 +59,13 @@ __asm___10_croutine_c____REV16 <= USED 0
 __asm___10_croutine_c____REVSH <= USED 0
 __asm___10_croutine_c____RRX <= USED 0
 ;FILE delay.o
-__asm___7_delay_c_f6a9c549____REV16 <= USED 0
-__asm___7_delay_c_f6a9c549____REVSH <= USED 0
-__asm___7_delay_c_f6a9c549____RRX <= USED 0
+__asm___7_delay_c_8c8ced7d____REV16 <= USED 0
+__asm___7_delay_c_8c8ced7d____REVSH <= USED 0
+__asm___7_delay_c_8c8ced7d____RRX <= USED 0
 delay_init <= USED 0
-delay_ms <= USED 0
-delay_us <= USED 0
-delay_xms <= USED 0
+delay_osschedlock <= USED 0
+delay_osschedunlock <= USED 0
+delay_ostimedly <= USED 0
 ;FILE event_groups.o
 __asm___14_event_groups_c_5f98c4ce____REV16 <= USED 0
 __asm___14_event_groups_c_5f98c4ce____REVSH <= USED 0
@@ -88,6 +87,7 @@ __asm___10_freertos_c_a1747ccd____REVSH <= USED 0
 __asm___10_freertos_c_a1747ccd____RRX <= USED 0
 ;FILE fsmc.o
 HAL_SRAM_MspDeInit <= USED 0
+MX_FSMC_Init <= USED 0
 __asm___6_fsmc_c_780bbf4a____REV16 <= USED 0
 __asm___6_fsmc_c_780bbf4a____REVSH <= USED 0
 __asm___6_fsmc_c_780bbf4a____RRX <= USED 0
@@ -102,6 +102,27 @@ __asm___8_heap_4_c_94e30ff9____RRX <= USED 0
 vPortInitialiseBlocks <= USED 0
 xPortGetFreeHeapSize <= USED 0
 xPortGetMinimumEverFreeHeapSize <= USED 0
+;FILE lcd.o
+LCD_BGR2RGB <= USED 0
+LCD_Color_Fill <= USED 0
+LCD_DisplayOff <= USED 0
+LCD_DisplayOn <= USED 0
+LCD_DrawLine <= USED 0
+LCD_DrawPoint <= USED 0
+LCD_DrawRectangle <= USED 0
+LCD_Draw_Circle <= USED 0
+LCD_Fill <= USED 0
+LCD_Pow <= USED 0
+LCD_ReadPoint <= USED 0
+LCD_ReadReg <= USED 0
+LCD_Set_Window <= USED 0
+LCD_ShowNum <= USED 0
+LCD_ShowxNum <= USED 0
+LCD_WriteRAM <= USED 0
+__asm___5_lcd_c_b9e5b2ae____REV16 <= USED 0
+__asm___5_lcd_c_b9e5b2ae____REVSH <= USED 0
+__asm___5_lcd_c_b9e5b2ae____RRX <= USED 0
+opt_delay <= USED 0
 ;FILE list.o
 __asm___6_list_c_a968f7cb____REV16 <= USED 0
 __asm___6_list_c_a968f7cb____REVSH <= USED 0
@@ -110,7 +131,6 @@ __asm___6_list_c_a968f7cb____RRX <= USED 0
 __asm___6_main_c_main____REV16 <= USED 0
 __asm___6_main_c_main____REVSH <= USED 0
 __asm___6_main_c_main____RRX <= USED 0
-fputc <= USED 0
 ;FILE malloc.o
 __asm___8_malloc_c_4dd4ad64____REV16 <= USED 0
 __asm___8_malloc_c_4dd4ad64____REVSH <= USED 0
@@ -128,7 +148,6 @@ myrealloc <= USED 0
 __asm___6_port_c_39a90d8d____REV16 <= USED 0
 __asm___6_port_c_39a90d8d____REVSH <= USED 0
 __asm___6_port_c_39a90d8d____RRX <= USED 0
-vPortEndScheduler <= USED 0
 vPortGetIPSR <= USED 0
 vPortValidateInterruptPriority <= USED 0
 ;FILE queue.o
@@ -518,7 +537,6 @@ HAL_UART_Receive <= USED 0
 HAL_UART_Receive_DMA <= USED 0
 HAL_UART_Receive_IT <= USED 0
 HAL_UART_RxHalfCpltCallback <= USED 0
-HAL_UART_Transmit <= USED 0
 HAL_UART_Transmit_DMA <= USED 0
 HAL_UART_Transmit_IT <= USED 0
 HAL_UART_TxHalfCpltCallback <= USED 0
@@ -576,10 +594,11 @@ __asm___20_stm32f4xx_ll_sdmmc_c_d2dde155____RRX <= USED 0
 INTX_DISABLE <= USED 0
 INTX_ENABLE <= USED 0
 MSR_MSP <= USED 0
+Stm32_Clock_Init <= USED 0
 WFI_SET <= USED 0
-__asm___5_sys_c_WFI_SET____REV16 <= USED 0
-__asm___5_sys_c_WFI_SET____REVSH <= USED 0
-__asm___5_sys_c_WFI_SET____RRX <= USED 0
+__asm___5_sys_c_f0f76e4f____REV16 <= USED 0
+__asm___5_sys_c_f0f76e4f____REVSH <= USED 0
+__asm___5_sys_c_f0f76e4f____RRX <= USED 0
 ;FILE system_stm32f4xx.o
 SystemCoreClockUpdate <= USED 0
 __asm___18_system_stm32f4xx_c_5d646a67____REV16 <= USED 0
@@ -597,7 +616,6 @@ uxTaskPriorityGet <= USED 0
 uxTaskPriorityGetFromISR <= USED 0
 uxTaskResetEventItemValue <= USED 0
 vTaskDelete <= USED 0
-vTaskEndScheduler <= USED 0
 vTaskMissedYield <= USED 0
 vTaskNotifyGiveFromISR <= USED 0
 vTaskPlaceOnEventList <= USED 0
