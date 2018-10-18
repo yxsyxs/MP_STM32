@@ -50,6 +50,7 @@
 #include "main.h"
 #include "stm32f4xx_hal.h"
 #include "cmsis_os.h"
+#include "fatfs.h"
 #include "sdio.h"
 #include "usart.h"
 #include "gpio.h"
@@ -122,7 +123,7 @@ int main(void)
   MX_GPIO_Init();
   MX_SDIO_SD_Init();
   MX_USART1_UART_Init();
-//  MX_FSMC_Init();
+  MX_FSMC_Init();
   /* USER CODE BEGIN 2 */
   //delay_init(168);
   
@@ -139,7 +140,7 @@ int main(void)
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
-  //MX_FREERTOS_Init();
+  MX_FREERTOS_Init();
 
   /* Start scheduler */
   osKernelStart();
@@ -247,14 +248,14 @@ void start_task(void *pvParameters)
 //                (TaskHandle_t*  )&Task2Task_Handler); 
 //    vTaskDelete(StartTask_Handler); //删除开始任务
 //    taskEXIT_CRITICAL();            //退出临界区
-	
-	LCD_ShowString(30,50,200,16,16,"Font Error!");
+	delay_xms(50);
+    LCD_ShowString(30,50,200,16,16,"Font Error!");
 	while(pdTRUE)
 	{
 	    HAL_GPIO_TogglePin(GPIOF, GPIO_PIN_9);
 	    HAL_GPIO_TogglePin(GPIOF, GPIO_PIN_10);
 	    //vTaskDelay(1000);                           //延时1s，也就是1000个时钟节拍
-		delay_ms(50);
+		delay_xms(50);
 	}		
 } 
 

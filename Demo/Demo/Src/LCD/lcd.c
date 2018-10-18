@@ -495,7 +495,7 @@ void LCD_Init(void)
 	FSMC_ReadWriteTim.AccessMode=FSMC_ACCESS_MODE_A;//模式A
 	//FMC写时序控制寄存器
 	FSMC_WriteTim.BusTurnAroundDuration=0;			//总线周转阶段持续时间为0，此变量不赋值的话会莫名其妙的自动修改为4。导致程序运行正常
-	FSMC_WriteTim.AddressSetupTime=9;          		//地址建立时间（ADDSET）为9个HCLK =54ns 
+	FSMC_WriteTim.AddressSetupTime=16;          		//地址建立时间（ADDSET）为9个HCLK =54ns 
 	FSMC_WriteTim.AddressHoldTime=0;
 	FSMC_WriteTim.DataSetupTime=8;              	//数据保存时间为6ns*9个HCLK=54n
 	FSMC_WriteTim.AccessMode=FSMC_ACCESS_MODE_A;    //模式A

@@ -50,6 +50,16 @@ demo\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
 demo\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 demo\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 demo\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+demo\main.o: ../Inc/fatfs.h
+demo\main.o: ../Middlewares/Third_Party/FatFs/src/ff.h
+demo\main.o: ../Middlewares/Third_Party/FatFs/src/integer.h
+demo\main.o: ../Inc/ffconf.h
+demo\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+demo\main.o: ../Inc/bsp_driver_sd.h
+demo\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+demo\main.o: ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h
+demo\main.o: ../Middlewares/Third_Party/FatFs/src/diskio.h
+demo\main.o: ../Inc/sd_diskio.h
 demo\main.o: ../Inc/sdio.h
 demo\main.o: ../Inc/usart.h
 demo\main.o: ../Inc/gpio.h
@@ -57,7 +67,6 @@ demo\main.o: ../Inc/fsmc.h
 demo\main.o: ..\Src\SRAM\sram.h
 demo\main.o: ..\Src\sys\sys.h
 demo\main.o: ..\Src\LCD\lcd.h
-demo\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 demo\main.o: ..\Src\TEXT\text.h
 demo\main.o: ..\Src\TEXT\fontupd.h
 demo\main.o: ..\Src\delay\delay.h
