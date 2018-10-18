@@ -125,9 +125,9 @@ int main(void)
 //  MX_FSMC_Init();
   /* USER CODE BEGIN 2 */
   //delay_init(168);
-  LCD_Init();
-  FSMC_SRAM_Init();
   
+  FSMC_SRAM_Init();
+  LCD_Init();
   xTaskCreate((TaskFunction_t )start_task,            //任务函数
                 (const char*    )"start_task",          //任务名称
                 (uint16_t       )START_STK_SIZE,        //任务堆栈大小
@@ -247,12 +247,14 @@ void start_task(void *pvParameters)
 //                (TaskHandle_t*  )&Task2Task_Handler); 
 //    vTaskDelete(StartTask_Handler); //删除开始任务
 //    taskEXIT_CRITICAL();            //退出临界区
+	
 	LCD_ShowString(30,50,200,16,16,"Font Error!");
 	while(pdTRUE)
 	{
 	    HAL_GPIO_TogglePin(GPIOF, GPIO_PIN_9);
 	    HAL_GPIO_TogglePin(GPIOF, GPIO_PIN_10);
-	    vTaskDelay(1000);                           //延时1s，也就是1000个时钟节拍
+	    //vTaskDelay(1000);                           //延时1s，也就是1000个时钟节拍
+		delay_ms(50);
 	}		
 } 
 

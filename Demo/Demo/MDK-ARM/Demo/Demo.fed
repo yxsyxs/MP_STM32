@@ -1,4 +1,4 @@
-;#<FEEDBACK># ARM Linker, 5060750: Last Updated: Mon Oct 15 23:25:54 2018
+;#<FEEDBACK># ARM Linker, 5060750: Last Updated: Thu Oct 18 19:04:56 2018
 ;VERSION 0.2
 ;FILE cmsis_os.o
 __asm___10_cmsis_os_c_9292335d____REV16 <= USED 0
@@ -7,6 +7,7 @@ __asm___10_cmsis_os_c_9292335d____RRX <= USED 0
 osAbortDelay <= USED 0
 osDelay <= USED 0
 osDelayUntil <= USED 0
+osKernelRunning <= USED 0
 osKernelSysTick <= USED 0
 osMailAlloc <= USED 0
 osMailCAlloc <= USED 0
@@ -59,13 +60,10 @@ __asm___10_croutine_c____REV16 <= USED 0
 __asm___10_croutine_c____REVSH <= USED 0
 __asm___10_croutine_c____RRX <= USED 0
 ;FILE delay.o
-__asm___7_delay_c_8c8ced7d____REV16 <= USED 0
-__asm___7_delay_c_8c8ced7d____REVSH <= USED 0
-__asm___7_delay_c_8c8ced7d____RRX <= USED 0
-delay_init <= USED 0
-delay_osschedlock <= USED 0
-delay_osschedunlock <= USED 0
-delay_ostimedly <= USED 0
+__asm___7_delay_c_delay_us____REV16 <= USED 0
+__asm___7_delay_c_delay_us____REVSH <= USED 0
+__asm___7_delay_c_delay_us____RRX <= USED 0
+delay_xms <= USED 0
 ;FILE event_groups.o
 __asm___14_event_groups_c_5f98c4ce____REV16 <= USED 0
 __asm___14_event_groups_c_5f98c4ce____REVSH <= USED 0
@@ -127,6 +125,7 @@ opt_delay <= USED 0
 __asm___6_list_c_a968f7cb____REV16 <= USED 0
 __asm___6_list_c_a968f7cb____REVSH <= USED 0
 __asm___6_list_c_a968f7cb____RRX <= USED 0
+vListInsert <= USED 0
 ;FILE main.o
 __asm___6_main_c_main____REV16 <= USED 0
 __asm___6_main_c_main____REVSH <= USED 0
@@ -148,6 +147,7 @@ myrealloc <= USED 0
 __asm___6_port_c_39a90d8d____REV16 <= USED 0
 __asm___6_port_c_39a90d8d____REVSH <= USED 0
 __asm___6_port_c_39a90d8d____RRX <= USED 0
+vPortEndScheduler <= USED 0
 vPortGetIPSR <= USED 0
 vPortValidateInterruptPriority <= USED 0
 ;FILE queue.o
@@ -615,7 +615,9 @@ uxTaskGetNumberOfTasks <= USED 0
 uxTaskPriorityGet <= USED 0
 uxTaskPriorityGetFromISR <= USED 0
 uxTaskResetEventItemValue <= USED 0
+vTaskDelay <= USED 0
 vTaskDelete <= USED 0
+vTaskEndScheduler <= USED 0
 vTaskMissedYield <= USED 0
 vTaskNotifyGiveFromISR <= USED 0
 vTaskPlaceOnEventList <= USED 0
