@@ -77,6 +77,9 @@ TaskHandle_t StartTask_Handler;
 //任务函数
 void start_task(void *pvParameters);
 
+FIL *fp;
+char buf[] = "hwllo world!";
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -122,6 +125,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_SDIO_SD_Init();
+  MX_FATFS_Init();
   MX_USART1_UART_Init();
   MX_FSMC_Init();
   /* USER CODE BEGIN 2 */
@@ -231,6 +235,7 @@ void SystemClock_Config(void)
 //开始任务任务函数
 void start_task(void *pvParameters)
 {
+	uint32_t *i = 0;
 //    taskENTER_CRITICAL();           //进入临界区
     //创建TASK1任务
 //    xTaskCreate((TaskFunction_t )task1_task,             
@@ -250,8 +255,12 @@ void start_task(void *pvParameters)
 //    taskEXIT_CRITICAL();            //退出临界区
 	delay_xms(50);
     LCD_ShowString(30,50,200,16,16,"Font Error!");
+	f_open (fp, "/TEST.TXT", 7);	
+	f_write (fp, buf, 12, i);
+	f_close(fp);
 	while(pdTRUE)
 	{
+		
 	    HAL_GPIO_TogglePin(GPIOF, GPIO_PIN_9);
 	    HAL_GPIO_TogglePin(GPIOF, GPIO_PIN_10);
 	    //vTaskDelay(1000);                           //延时1s，也就是1000个时钟节拍

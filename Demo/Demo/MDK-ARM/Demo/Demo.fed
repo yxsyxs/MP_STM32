@@ -1,4 +1,4 @@
-;#<FEEDBACK># ARM Linker, 5060750: Last Updated: Thu Oct 18 19:37:46 2018
+;#<FEEDBACK># ARM Linker, 5060750: Last Updated: Thu Oct 18 21:10:36 2018
 ;VERSION 0.2
 ;FILE bsp_driver_sd.o
 BSP_SD_AbortCallback <= USED 0
@@ -47,8 +47,6 @@ osRecursiveMutexWait <= USED 0
 osSemaphoreCreate <= USED 0
 osSemaphoreDelete <= USED 0
 osSemaphoreGetCount <= USED 0
-osSemaphoreRelease <= USED 0
-osSemaphoreWait <= USED 0
 osSignalSet <= USED 0
 osSignalWait <= USED 0
 osThreadGetId <= USED 0
@@ -77,11 +75,6 @@ __asm___7_delay_c_delay_us____RRX <= USED 0
 __asm___8_diskio_c_fd8865f0____REV16 <= USED 0
 __asm___8_diskio_c_fd8865f0____REVSH <= USED 0
 __asm___8_diskio_c_fd8865f0____RRX <= USED 0
-disk_initialize <= USED 0
-disk_ioctl <= USED 0
-disk_read <= USED 0
-disk_status <= USED 0
-disk_write <= USED 0
 ;FILE event_groups.o
 __asm___14_event_groups_c_5f98c4ce____REV16 <= USED 0
 __asm___14_event_groups_c_5f98c4ce____REVSH <= USED 0
@@ -99,12 +92,10 @@ xEventGroupWaitBits <= USED 0
 __asm___7_fatfs_c_ff45d98e____REV16 <= USED 0
 __asm___7_fatfs_c_ff45d98e____REVSH <= USED 0
 __asm___7_fatfs_c_ff45d98e____RRX <= USED 0
-get_fattime <= USED 0
 ;FILE ff.o
 __asm___4_ff_c_f_mount____REV16 <= USED 0
 __asm___4_ff_c_f_mount____REVSH <= USED 0
 __asm___4_ff_c_f_mount____RRX <= USED 0
-f_close <= USED 0
 f_closedir <= USED 0
 f_getfree <= USED 0
 f_gets <= USED 0
@@ -112,7 +103,6 @@ f_lseek <= USED 0
 f_mkdir <= USED 0
 f_mkfs <= USED 0
 f_mount <= USED 0
-f_open <= USED 0
 f_opendir <= USED 0
 f_printf <= USED 0
 f_putc <= USED 0
@@ -121,10 +111,8 @@ f_read <= USED 0
 f_readdir <= USED 0
 f_rename <= USED 0
 f_stat <= USED 0
-f_sync <= USED 0
 f_truncate <= USED 0
 f_unlink <= USED 0
-f_write <= USED 0
 ;FILE ff_gen_drv.o
 FATFS_GetAttachedDriversNbr <= USED 0
 FATFS_UnLinkDriver <= USED 0
@@ -152,7 +140,7 @@ __asm___8_heap_4_c_94e30ff9____RRX <= USED 0
 vPortInitialiseBlocks <= USED 0
 xPortGetFreeHeapSize <= USED 0
 xPortGetMinimumEverFreeHeapSize <= USED 0
-;FILE lcd.o
+;FILE lcd_1.o
 LCD_BGR2RGB <= USED 0
 LCD_Color_Fill <= USED 0
 LCD_DisplayOff <= USED 0
@@ -178,10 +166,10 @@ __asm___6_list_c_a968f7cb____REV16 <= USED 0
 __asm___6_list_c_a968f7cb____REVSH <= USED 0
 __asm___6_list_c_a968f7cb____RRX <= USED 0
 ;FILE main.o
-__asm___6_main_c_main____REV16 <= USED 0
-__asm___6_main_c_main____REVSH <= USED 0
-__asm___6_main_c_main____RRX <= USED 0
-;FILE malloc.o
+__asm___6_main_c_buf____REV16 <= USED 0
+__asm___6_main_c_buf____REVSH <= USED 0
+__asm___6_main_c_buf____RRX <= USED 0
+;FILE malloc_1.o
 __asm___8_malloc_c_4dd4ad64____REV16 <= USED 0
 __asm___8_malloc_c_4dd4ad64____REVSH <= USED 0
 __asm___8_malloc_c_4dd4ad64____RRX <= USED 0
@@ -211,7 +199,6 @@ vQueueAddToRegistry <= USED 0
 vQueueDelete <= USED 0
 vQueueUnregisterQueue <= USED 0
 xQueueCreateMutex <= USED 0
-xQueueGiveFromISR <= USED 0
 xQueueIsQueueEmptyFromISR <= USED 0
 xQueueIsQueueFullFromISR <= USED 0
 xQueuePeekFromISR <= USED 0
@@ -225,7 +212,7 @@ HAL_SD_MspDeInit <= USED 0
 __asm___6_sdio_c_62cda922____REV16 <= USED 0
 __asm___6_sdio_c_62cda922____REVSH <= USED 0
 __asm___6_sdio_c_62cda922____RRX <= USED 0
-;FILE sram.o
+;FILE sram_1.o
 FSMC_SRAM_ReadBuffer <= USED 0
 FSMC_SRAM_WriteBuffer <= USED 0
 __asm___6_sram_c_85dea831____REV16 <= USED 0
@@ -638,8 +625,6 @@ __asm___9_syscall_c_a33ef7bb____REVSH <= USED 0
 __asm___9_syscall_c_a33ef7bb____RRX <= USED 0
 ff_cre_syncobj <= USED 0
 ff_del_syncobj <= USED 0
-ff_rel_grant <= USED 0
-ff_req_grant <= USED 0
 ;FILE system_stm32f4xx.o
 SystemCoreClockUpdate <= USED 0
 __asm___18_system_stm32f4xx_c_5d646a67____REV16 <= USED 0

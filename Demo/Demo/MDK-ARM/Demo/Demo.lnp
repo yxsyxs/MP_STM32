@@ -1,10 +1,7 @@
 --cpu=Cortex-M4.fp
 "demo\startup_stm32f407xx.o"
-"demo\sram.o"
 "demo\sys.o"
 "demo\delay.o"
-"demo\malloc.o"
-"demo\lcd.o"
 "demo\main.o"
 "demo\gpio.o"
 "demo\bsp_driver_sd.o"
@@ -50,6 +47,9 @@
 "demo\diskio.o"
 "demo\ff.o"
 "demo\ff_gen_drv.o"
+"demo\lcd_1.o"
+"demo\malloc_1.o"
+"demo\sram_1.o"
 --library_type=microlib
 --feedback "Demo\Demo.fed" --feedback_image=none
 --strict --scatter "Demo\Demo.sct"

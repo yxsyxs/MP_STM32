@@ -64,9 +64,9 @@ demo\main.o: ../Inc/sdio.h
 demo\main.o: ../Inc/usart.h
 demo\main.o: ../Inc/gpio.h
 demo\main.o: ../Inc/fsmc.h
-demo\main.o: ..\Src\SRAM\sram.h
+demo\main.o: ..\Hardware\SRAM\sram.h
 demo\main.o: ..\Src\sys\sys.h
-demo\main.o: ..\Src\LCD\lcd.h
-demo\main.o: ..\Src\TEXT\text.h
-demo\main.o: ..\Src\TEXT\fontupd.h
+demo\main.o: ..\Hardware\LCD\lcd.h
+demo\main.o: ..\Hardware\TEXT\text.h
+demo\main.o: ..\Hardware\TEXT\fontupd.h
 demo\main.o: ..\Src\delay\delay.h
